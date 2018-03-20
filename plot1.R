@@ -7,9 +7,7 @@ initFirstPlot <- function() {
     setwd("D:/Workspace/Coursera/DOST Data Science/R Workspace/Module 4/Week 1")
     
     #Loads the data that will be used on this script
-    powerData <- read.table(file = "household_power_consumption.txt", sep = ";", stringsAsFactors = FALSE)
-    powerData <- setNames(powerData, c(powerData[1,]))
-    powerData <- powerData[-1,]
+    powerData <- read.table(file = "household_power_consumption.txt", header = TRUE, sep = ";", stringsAsFactors = FALSE)
     
     #Formats the date to the proper format
     dateData <- powerData[,1]
